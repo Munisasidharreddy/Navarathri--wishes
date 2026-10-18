@@ -1,50 +1,162 @@
-<title>Happy Dussehra - Family Wishes</title>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<h1>🙏 Happy Dussehra 🙏</h1>
-<h2>🌺 విజయదశమి శుభాకాంక్షలు 🌺</h2>
+<title>Happy Dussehra Wishes</title>
 
-<p class="message">
-  May Lord Rama and Durga Devi bless our family
-  with happiness, health, peace and success.
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 20px 12px;
+  text-align: center;
+  font-family: Georgia, serif;
+  color: #fff5d6;
+  background: linear-gradient(#650000, #a51c1c, #e87916);
+}
+
+h1 {
+  color: #ffdf75;
+  font-size: 34px;
+  text-shadow: 2px 2px 5px #350000;
+}
+
+.subtitle {
+  color: #ffe5a0;
+  font-size: 21px;
+}
+
+.photos {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  gap: 12px;
+  max-width: 650px;
+  margin: 25px auto;
+}
+
+.photos img {
+  width: calc(50% - 6px);
+  height: 260px;
+  object-fit: contain;
+  background: #fff;
+  border: 3px solid gold;
+  border-radius: 12px;
+}
+
+.message {
+  max-width: 650px;
+  margin: 20px auto;
+  padding: 18px;
+  border: 2px solid gold;
+  border-radius: 15px;
+  background: rgba(75, 0, 0, 0.4);
+  font-size: 18px;
+  line-height: 1.8;
+}
+
+.watch-button {
+  display: inline-block;
+  margin: 15px auto 25px;
+  padding: 15px 24px;
+  color: #690000;
+  background: #ffdf75;
+  border: 2px solid white;
+  border-radius: 30px;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.watch-button:hover {
+  background: white;
+  transform: scale(1.03);
+}
+
+#videoSection {
+  display: none;
+  max-width: 700px;
+  margin: 20px auto;
+}
+
+#festivalVideo {
+  width: 100%;
+  border: 3px solid gold;
+  border-radius: 12px;
+}
+
+footer {
+  margin-top: 25px;
+  color: #ffdf75;
+}
+</style>
+</head>
+
+<body>
+
+<h1>🌺 HAPPY DUSSEHRA 🌺</h1>
+
+<p class="subtitle">
+  🙏 విజయదశమి శుభాకాంక్షలు 🙏
 </p>
 
 <div class="photos">
   <img src="rama.jpg" alt="Lord Rama">
-  <img src="durga.jpg" alt="Goddess Durga Devi">
+  <img src="durga.jpg" alt="Durga Devi">
 </div>
 
-<h2>🎥 Dussehra Special Video 🎥</h2>
+<div class="message">
+  <h2>🪔 The Festival of Victory 🪔</h2>
 
-<div class="video-box">
-  <video controls playsinline preload="metadata">
+  <p>
+    Dussehra celebrates the victory of good over evil.
+    May Lord Rama and Durga Devi bless our family
+    with happiness, peace, good health and prosperity.
+  </p>
+
+  <p>
+    Wishing you all a joyful and blessed Dussehra! ❤️
+  </p>
+</div>
+
+<button class="watch-button" onclick="showVideo()">
+  ▶ WATCH THIS VIDEO
+</button>
+
+<div id="videoSection">
+  <h2>🎥 Dussehra Special Video 🎥</h2>
+
+  <video id="festivalVideo" controls playsinline preload="none">
     <source src="dussehra.mp4" type="video/mp4">
     Your browser does not support this video.
   </video>
 </div>
 
-<div class="wishes">
-  <h2>❤️ Warm Wishes to My Lovely Family ❤️</h2>
-
-  <p>
-    Dear Family Members, 🌸
-    <br><br>
-    Wishing you all a very Happy Dussehra!
-    🙏🌺
-    <br><br>
-    May Lord Rama guide us towards truth and goodness,
-    and may Durga Devi bless our family with strength,
-    peace, prosperity and good health.
-    <br><br>
-    May this beautiful festival fill every home
-    with love, joy and happiness.
-    <br><br>
-    Happy Vijayadashami to everyone! 🪔✨
-    <br><br>
-    With lots of love to our entire family ❤️
-  </p>
-</div>
-
 <footer>
-  🌼 शुभ दशहरा 🌼<br>
-  Best Wishes to Our Entire Family ❤️
+  🌼 Best Wishes to Our Entire Family 🌼
 </footer>
+
+<script>
+function showVideo() {
+  const section = document.getElementById("videoSection");
+  const video = document.getElementById("festivalVideo");
+
+  section.style.display = "block";
+  video.play().catch(() => {
+    video.scrollIntoView({ behavior: "smooth", block: "center" });
+  });
+
+  section.scrollIntoView({
+    behavior: "smooth",
+    block: "start"
+  });
+}
+</script>
+
+</body>
+</html>
